@@ -8,11 +8,11 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Qt5 COMPONENTS Widgets Multimedia REQUIRED) # Qt COMPONENTS
+set(CMAKE_BUILD_TYPE DEBUG)
 
 include_directories(./include)
 # aux_source_directory(./plant SRC)
 file(GLOB_RECURSE SRC plants/*.cpp zombie/*.cpp shop/*.cpp ui/*.cpp  )
-message(${SRC})
 
 add_executable(${PROJECT_NAME} ${SRC} include/mainwindow.h)
 target_link_libraries(${PROJECT_NAME}  Qt5::Widgets Qt5::Multimedia)
