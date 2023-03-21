@@ -5,7 +5,7 @@ Repeater::Repeater()
     atk = 25;
     hp = 300;
     time = int(1.4 * 1000 / 33);
-    setMovie(":resource/images/Repeater.gif");
+    setMovie(":/images/Repeater.gif");
 }
 
 void Repeater::advance(int phase)

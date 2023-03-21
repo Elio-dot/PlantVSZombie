@@ -3,7 +3,11 @@
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 {
     qsrand(uint(QTime(0,0,0).secsTo(QTime::currentTime())));
+<<<<<<< HEAD
     sound = new QSound("resource/GrazyDave.wav");
+=======
+    sound = new QSound("../resource/GrazyDave.wav");
+>>>>>>> dev
     sound->setLoops(QSound::Infinite);
     timer = new QTimer;
     scene = new QGraphicsScene(this);
@@ -30,7 +34,11 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     view = new QGraphicsView(scene, this);
     view->resize(902, 602);
     view->setRenderHint(QPainter::Antialiasing);
+<<<<<<< HEAD
     view->setBackgroundBrush(QPixmap("resource/images/Background.jpg"));
+=======
+    view->setBackgroundBrush(QPixmap(":/images/Background.jpg"));
+>>>>>>> dev
     view->setCacheMode(QGraphicsView::CacheBackground);
     view->setViewportUpdateMode(QGraphicsView::BoundingRectViewportUpdate);
     connect(timer, &QTimer::timeout, scene, &QGraphicsScene::advance);

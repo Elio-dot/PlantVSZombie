@@ -5,7 +5,7 @@ PotatoMine::PotatoMine()
     atk = 1800;
     hp = 300;
     time = int(15.0 * 1000 / 33);
-    setMovie(":resource/images/PotatoMine1.gif");
+    setMovie(":/images/PotatoMine1.gif");
 }
 
 QRectF PotatoMine::boundingRect() const
@@ -25,7 +25,7 @@ void PotatoMine::advance(int phase)
         state = 1;
         counter = 0;
         time = int(1.0 * 1000 / 33);
-        setMovie(":resource/images/PotatoMine.gif");
+        setMovie(":/images/PotatoMine.gif");
     }
     else if (state == 1 && ++counter >= time)
     {
@@ -34,7 +34,7 @@ void PotatoMine::advance(int phase)
         if (!items.isEmpty())
         {
             state = 2;
-            setMovie(":resource/images/PotatoMineBomb.gif");
+            setMovie(":/images/PotatoMineBomb.gif");
             foreach (QGraphicsItem *item, items)
             {
                 Zombie *zombie = qgraphicsitem_cast<Zombie *>(item);

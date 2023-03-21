@@ -24,8 +24,8 @@ void Card::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWid
     Q_UNUSED(option)
     Q_UNUSED(widget)
     painter->scale(0.6, 0.58);
-    painter->drawPixmap(QRect(-50, -70, 100, 140), QPixmap(":resource/images/Card.png"));
-    painter->drawPixmap(QRect(-35, -42, 70, 70), QPixmap(":resource/images/" + text + ".png"));
+    painter->drawPixmap(QRect(-50, -70, 100, 140), QPixmap(":/images/Card.png"));
+    painter->drawPixmap(QRect(-35, -42, 70, 70), QPixmap(":/images/" + text + ".png"));
     QFont font;
     font.setPointSizeF(15);
     painter->setFont(font);
@@ -65,7 +65,7 @@ void Card::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
         return;
     QDrag *drag = new QDrag(event->widget());
     QMimeData *mime = new QMimeData;
-    QImage image(":resource/images/" + text + ".png");
+    QImage image(":/images/" + text + ".png");
     mime->setText(text);
     mime->setImageData(image);
     drag->setMimeData(mime);
