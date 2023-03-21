@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "qapplication": "cpp",
+        "qsound": "cpp",
+        "qgraphicsscene": "cpp",
+        "qmainwindow": "cpp"
+    },
+    "qtConfigure.qtKitDir": "/opt/Qt5.12.12/5.12.12/gcc_64"
+}
