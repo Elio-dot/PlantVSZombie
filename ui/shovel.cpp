@@ -14,8 +14,8 @@ void Shovel::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QW
 {
     Q_UNUSED(option)
     Q_UNUSED(widget)
-    painter->drawPixmap(QRect(-40, -40, 80, 80), QPixmap(":resource/images/ShovelBank.png"));
-    painter->drawPixmap(QRect(-35, -35, 70, 70), QPixmap(":resource/images/Shovel.png"));
+    painter->drawPixmap(QRect(-40, -40, 80, 80), QPixmap(":/images/ShovelBank.png"));
+    painter->drawPixmap(QRect(-35, -35, 70, 70), QPixmap(":/images/Shovel.png"));
 }
 
 void Shovel::mousePressEvent(QGraphicsSceneMouseEvent *event)
@@ -31,7 +31,7 @@ void Shovel::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
         return;
     QDrag *drag = new QDrag(event->widget());
     QMimeData *mime = new QMimeData;
-    QImage image(":resource/images/Shovel.png");
+    QImage image(":/images/Shovel.png");
     mime->setText("Shovel");
     mime->setImageData(image);
     drag->setMimeData(mime);

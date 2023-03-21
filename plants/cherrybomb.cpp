@@ -4,7 +4,7 @@ CherryBomb::CherryBomb()
 {
     atk = 1800;
     hp = 300;
-    setMovie(":resource/images/CherryBomb.gif");
+    setMovie(":/images/CherryBomb.gif");
 }
 
 QRectF CherryBomb::boundingRect() const
@@ -22,7 +22,7 @@ void CherryBomb::advance(int phase)
     else if (state == 0 && movie->currentFrameNumber() == movie->frameCount() - 1)
     {
         state = 1;
-        setMovie(":resource/images/Boom.gif");
+        setMovie(":/images/Boom.gif");
         QList<QGraphicsItem *> items = collidingItems();
         foreach (QGraphicsItem *item, items)
         {
@@ -31,7 +31,7 @@ void CherryBomb::advance(int phase)
             if (zombie->hp <= 0)
             {
                 zombie->state = 3;
-                zombie->setMovie(":resource/images/Burn.gif");
+                zombie->setMovie(":/images/Burn.gif");
             }
         }
     }

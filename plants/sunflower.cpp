@@ -5,7 +5,7 @@ SunFlower::SunFlower()
 {
     hp = 300;
     time = int(10.0 * 1000 / 33);
-    setMovie(":resource/images/SunFlower.gif");
+    setMovie(":/images/SunFlower.gif");
 }
 
 void SunFlower::advance(int phase)

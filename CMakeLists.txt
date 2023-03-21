@@ -12,7 +12,7 @@ find_package(Qt5 COMPONENTS Widgets Multimedia REQUIRED) # Qt COMPONENTS
 include_directories(./include)
 # aux_source_directory(./plant SRC)
 file(GLOB_RECURSE SRC plants/*.cpp zombie/*.cpp shop/*.cpp ui/*.cpp  )
-message(${SRC})
+set(QRC resource/images.qrc)
 
-add_executable(${PROJECT_NAME} ${SRC} include/mainwindow.h)
+add_executable(${PROJECT_NAME} ${SRC} include/mainwindow.h ${QRC})
 target_link_libraries(${PROJECT_NAME}  Qt5::Widgets Qt5::Multimedia)

@@ -4,7 +4,7 @@
 WallNut::WallNut()
 {
     hp = 4000;
-    setMovie(":resource/images/WallNut.gif");
+    setMovie(":/images/WallNut.gif");
 }
 
 void WallNut::advance(int phase)
@@ -17,11 +17,11 @@ void WallNut::advance(int phase)
     else if (hp <= 1333 && state != 2)
     {
         state = 2;
-        setMovie(":resource/images/WallNut2.gif");
+        setMovie(":/images/WallNut2.gif");
     }
     else if (1333 < hp && hp <= 2667 && state != 1)
     {
         state = 1;
-        setMovie(":resource/images/WallNut1.gif");
+        setMovie(":/images/WallNut1.gif");
     }
 }

@@ -5,7 +5,7 @@ BucketZombie::BucketZombie()
     hp = 1370;
     atk = 100 * 33 / 1000;
     speed = 80.0 * 33 / 1000 / 4.7;
-    setMovie(":resource/images/BucketZombieWalk.gif");
+    setMovie(":/images/BucketZombieWalk.gif");
 }
 
 void BucketZombie::advance(int phase)
@@ -18,8 +18,8 @@ void BucketZombie::advance(int phase)
         if (state < 2)
         {
             state = 2;
-            setMovie(":resource/images/ZombieDie.gif");
-            setHead(":resource/images/ZombieHead.gif");
+            setMovie(":/images/ZombieDie.gif");
+            setHead(":/images/ZombieHead.gif");
         }
         else if (movie->currentFrameNumber() == movie->frameCount() - 1)
             delete this;
@@ -33,14 +33,14 @@ void BucketZombie::advance(int phase)
         if (state != 1)
         {
             state = 1;
-            setMovie(":resource/images/BucketZombieAttack.gif");
+            setMovie(":/images/BucketZombieAttack.gif");
         }
         return;
     }
     if (state)
     {
         state = 0;
-        setMovie(":resource/images/BucketZombieWalk.gif");
+        setMovie(":/images/BucketZombieWalk.gif");
     }
     setX(x() - speed);
 }

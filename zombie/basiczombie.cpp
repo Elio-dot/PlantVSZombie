@@ -6,9 +6,9 @@ BasicZombie::BasicZombie()
     atk = 100 * 33 / 1000;
     speed = 80.0 * 33 / 1000 / 4.7;
     if (qrand() % 2)
-        setMovie(":resource/images/ZombieWalk1.gif");
+        setMovie(":/images/ZombieWalk1.gif");
     else
-        setMovie(":resource/images/ZombieWalk2.gif");
+        setMovie(":/images/ZombieWalk2.gif");
 }
 
 void BasicZombie::advance(int phase)
@@ -21,8 +21,8 @@ void BasicZombie::advance(int phase)
         if (state < 2)
         {
             state = 2;
-            setMovie(":resource/images/ZombieDie.gif");
-            setHead(":resource/images/ZombieHead.gif");
+            setMovie(":/images/ZombieDie.gif");
+            setHead(":/images/ZombieHead.gif");
         }
         else if (movie->currentFrameNumber() == movie->frameCount() - 1)
             delete this;
@@ -36,7 +36,7 @@ void BasicZombie::advance(int phase)
         if (state != 1)
         {
             state = 1;
-            setMovie(":resource/images/ZombieAttack.gif");
+            setMovie(":/images/ZombieAttack.gif");
         }
         return;
     }
@@ -44,9 +44,9 @@ void BasicZombie::advance(int phase)
     {
         state = 0;
         if (qrand() % 2)
-            setMovie(":resource/images/ZombieWalk1.gif");
+            setMovie(":/images/ZombieWalk1.gif");
         else
-            setMovie(":resource/images/ZombieWalk2.gif");
+            setMovie(":/images/ZombieWalk2.gif");
     }
     setX(x() - speed);
 }

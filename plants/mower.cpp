@@ -15,7 +15,7 @@ void Mower::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWi
 {
     Q_UNUSED(option)
     Q_UNUSED(widget)
-    painter->drawPixmap(QRect(-30, -30, 60, 60), QPixmap(":resource/images/LawnMower.png"));
+    painter->drawPixmap(QRect(-30, -30, 60, 60), QPixmap(":/images/LawnMower.png"));
 }
 
 bool Mower::collidesWithItem(const QGraphicsItem *other, Qt::ItemSelectionMode mode) const

@@ -23,7 +23,7 @@ void Shop::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWid
 {
     Q_UNUSED(option)
     Q_UNUSED(widget)
-    painter->drawPixmap(QRect(-270, -45, 540, 90), QPixmap(":resource/images/Shop.png"));
+    painter->drawPixmap(QRect(-270, -45, 540, 90), QPixmap(":/images/Shop.png"));
     QFont font;
     font.setPointSizeF(15);
     painter->setFont(font);

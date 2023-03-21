@@ -5,7 +5,7 @@ FootballZombie::FootballZombie()
     hp = 1670;
     atk = 100 * 33 / 1000;
     speed = 80.0 * 33 / 1000 / 2.5;
-    setMovie(":resource/images/FootballZombieWalk.gif");
+    setMovie(":/images/FootballZombieWalk.gif");
 }
 
 void FootballZombie::advance(int phase)
@@ -18,8 +18,8 @@ void FootballZombie::advance(int phase)
         if (state < 2)
         {
             state = 2;
-            setMovie(":resource/images/FootballZombieDie.gif");
-            setHead(":resource/images/ZombieHead.gif");
+            setMovie(":/images/FootballZombieDie.gif");
+            setHead(":/images/ZombieHead.gif");
 
         }
         else if (movie->currentFrameNumber() == movie->frameCount() - 1)
@@ -34,14 +34,14 @@ void FootballZombie::advance(int phase)
         if (state != 1)
         {
             state = 1;
-            setMovie(":resource/images/FootballZombieAttack.gif");
+            setMovie(":/images/FootballZombieAttack.gif");
         }
         return;
     }
     if (state)
     {
         state = 0;
-        setMovie(":resource/images/FootballZombieWalk.gif");
+        setMovie(":/images/FootballZombieWalk.gif");
     }
     setX(x() - speed);
 }

@@ -5,7 +5,7 @@ ConeZombie::ConeZombie()
     hp = 640;
     atk = 100 * 33 / 1000;
     speed = 80.0 * 33 / 1000 / 4.7;
-    setMovie(":resource/images/ConeZombieWalk.gif");
+    setMovie(":/images/ConeZombieWalk.gif");
 }
 
 void ConeZombie::advance(int phase)
@@ -18,8 +18,8 @@ void ConeZombie::advance(int phase)
         if (state < 2)
         {
             state = 2;
-            setMovie(":resource/images/ZombieDie.gif");
-            setHead(":resource/images/ZombieHead.gif");
+            setMovie(":/images/ZombieDie.gif");
+            setHead(":/images/ZombieHead.gif");
         }
         else if (movie->currentFrameNumber() == movie->frameCount() - 1)
             delete this;
@@ -33,14 +33,14 @@ void ConeZombie::advance(int phase)
         if (state != 1)
         {
             state = 1;
-            setMovie(":resource/images/ConeZombieAttack.gif");
+            setMovie(":/images/ConeZombieAttack.gif");
         }
         return;
     }
     if (state)
     {
         state = 0;
-        setMovie(":resource/images/ConeZombieWalk.gif");
+        setMovie(":/images/ConeZombieWalk.gif");
     }
     setX(x() - speed);
 }

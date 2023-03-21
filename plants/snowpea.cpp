@@ -5,7 +5,7 @@ SnowPea::SnowPea()
     atk = 25;
     hp = 300;
     time = int(1.4 * 1000 / 33);
-    setMovie(":resource/images/SnowPea.gif");
+    setMovie(":/images/SnowPea.gif");
 }
 
 void SnowPea::advance(int phase)
