@@ -18,7 +18,7 @@
 2. 僵尸基类`Zombie`，派生类包括普通僵尸`BasicZombie`、路障僵尸`ConeZombie`等。
 3. 其他基类`Other`，派生类包括商店`Shop`、地图`Map`、卡牌`Card`等。
 
-![arch](images/arch.png)
+![arch](resource/images/arch.png)
 
 
 
@@ -28,7 +28,7 @@
 
 界面中的静态物体通过绘制`PNG`图片实现，动态物体通过绘制`GIF`图片的每一帧实现。
 
-![ui](images/ui.png)
+![ui](resource/images/ui.png)
 
 
 
@@ -228,7 +228,7 @@ void CherryBomb::advance(int phase)
     {
         state = 1;
         // 播放爆炸动画
-        setMovie(":/images/Boom.gif");
+        setMovie(":/resource/images/Boom.gif");
         QList<QGraphicsItem *> items = collidingItems();
         foreach (QGraphicsItem *item, items)
         {
@@ -238,7 +238,7 @@ void CherryBomb::advance(int phase)
             if (zombie->hp <= 0)
             {
                 zombie->state = 3;
-                zombie->setMovie(":/images/Burn.gif");
+                zombie->setMovie(":/resource/images/Burn.gif");
             }
         }
     }
@@ -267,8 +267,8 @@ void BasicZombie::advance(int phase)
         if (state < 2)
         {
             state = 2;
-            setMovie(":/images/ZombieDie.gif");
-            setHead(":/images/ZombieHead.gif");
+            setMovie(":/resource/images/ZombieDie.gif");
+            setHead(":/resource/images/ZombieHead.gif");
         }
         // 死亡动画播放结束
         else if (movie->currentFrameNumber() == movie->frameCount() - 1)
@@ -285,7 +285,7 @@ void BasicZombie::advance(int phase)
         if (state != 1)
         {
             state = 1;
-            setMovie(":/images/ZombieAttack.gif");
+            setMovie(":/resource/images/ZombieAttack.gif");
         }
         return;
     }
@@ -294,9 +294,9 @@ void BasicZombie::advance(int phase)
     {
         state = 0;
         if (qrand() % 2)
-            setMovie(":/images/ZombieWalk1.gif");
+            setMovie(":/resource/images/ZombieWalk1.gif");
         else
-            setMovie(":/images/ZombieWalk2.gif");
+            setMovie(":/resource/images/ZombieWalk2.gif");
     }
     // 向前移动
     setX(x() - speed);
@@ -321,7 +321,7 @@ void Card::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
     // 传递拖放数据
     QDrag *drag = new QDrag(event->widget());
     QMimeData *mime = new QMimeData;
-    QImage image(":/images/" + text + ".png");
+    QImage image(":/resource/images/" + text + ".png");
     mime->setText(text);
     mime->setImageData(image);
     drag->setMimeData(mime);
@@ -416,7 +416,7 @@ void Button::mousePressEvent(QGraphicsSceneMouseEvent *event)
 * 铲除，拖动铲子到地块
 * 暂停/继续，按下右上角按钮
 
-![ui](images/ui.png)
+![ui](resource/images/ui.png)
 
 
 
