@@ -15,5 +15,5 @@ include_directories(./include)
 file(GLOB_RECURSE SRC plants/*.cpp zombie/*.cpp shop/*.cpp ui/*.cpp  )
 set(QRC resource/images.qrc)
 
-add_executable(${PROJECT_NAME} ${SRC} include/mainwindow.h ${QRC})
+add_executable(${PROJECT_NAME} ${SRC} main.cpp include/mainwindow.h ${QRC})
 target_link_libraries(${PROJECT_NAME}  Qt5::Widgets Qt5::Multimedia)

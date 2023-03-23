@@ -3,7 +3,7 @@
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
 {
     qsrand(uint(QTime(0,0,0).secsTo(QTime::currentTime())));
-    sound = new QSound("../resource/GrazyDave.wav");
+    sound = new QSound(":/GrazyDave.wav");
     sound->setLoops(QSound::Infinite);
     timer = new QTimer;
     scene = new QGraphicsScene(this);
