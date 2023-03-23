@@ -4,13 +4,13 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/include",
-                "/opt/Qt5.12.12/5.12.12/gcc_64/include/**"
+                "D:/DevSoftwares/Qt/5.15.2/mingw81_64/include/**"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc",
+            "compilerPath":"D:/DevSoftwares/mingw64/bin/gcc.exe",
             "cStandard": "c17",
             "cppStandard": "gnu++17",
-            "intelliSenseMode": "linux-gcc-x64"
+            "intelliSenseMode": "windows-gcc-x64"
         }
     ],
     "version": 4
