@@ -431,3 +431,12 @@ void Button::mousePressEvent(QGraphicsSceneMouseEvent *event)
 2. 在不支持可视化编程的框架下如何高效开发？
 
    必须对`Qt`有较深入了解，并且对每个物体的坐标心中有数，反复调试。
+
+
+3. 编译项目：
+CMakeLists.txt中修改自己的qt kit的路径，然后新建一个build文件夹，不然各种中间文件在顶层目录会有点乱，然后：
+```shell
+    cd build
+    cmake ..
+    make 
+```
