@@ -46,5 +46,6 @@
         <file>images/ScreenZombieWalk.gif</file>
         <file>images/ZombiesWon.png</file>
         <file>GrazyDave.wav</file>
+        <file>PVZ.ico</file>
     </qresource>
 </RCC>
